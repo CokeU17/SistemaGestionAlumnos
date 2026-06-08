@@ -54,7 +54,25 @@ int main()
             break;
 
         case 2:
-            cout << "Opcion seleccionada: Mostrar alumnos" << endl;
+
+            if (totalAlumnos == 0)
+            {
+                cout << "No hay alumnos registrados." << endl;
+            }
+            else
+            {
+                cout << "=== LISTA DE ALUMNOS ===" << endl;
+
+                for (int i = 0; i < totalAlumnos; i++)
+                {
+                    cout << "Alumno #" << i + 1 << endl;
+                    cout << "Nombre: " << nombres[i] << endl;
+                    cout << "Matricula: " << matriculas[i] << endl;
+                    cout << "Promedio: " << promedios[i] << endl;
+                    cout << "------------------------" << endl;
+                }
+            }
+
             break;
 
         case 3:
