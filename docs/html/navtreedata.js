@@ -28,13 +28,21 @@ var NAVTREE =
     [ "SistemaGestionAlumnos", "md__r_e_a_d_m_e.html", [
       [ "Funciones", "md__r_e_a_d_m_e.html#autotoc_md1", null ],
       [ "Autor", "md__r_e_a_d_m_e.html#autotoc_md2", null ]
+    ] ],
+    [ "Files", "files.html", [
+      [ "File List", "files.html", "files_dup" ],
+      [ "File Members", "globals.html", [
+        [ "All", "globals.html", null ],
+        [ "Functions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ]
+      ] ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"index.html"
+"_sistema_gestion_alumnos_8cpp.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';
