@@ -1,6 +1,11 @@
 #include <iostream>
+#include <string>
 using namespace std;
-
+const int MAX_ALUMNOS = 3;
+string nombres[MAX_ALUMNOS];
+string matriculas[MAX_ALUMNOS];
+float promedios[MAX_ALUMNOS];
+int totalAlumnos = 0;
 int main()
 {
     int opcion;
@@ -23,7 +28,29 @@ int main()
         switch (opcion)
         {
         case 1:
-            cout << "Opcion seleccionada: Agregar alumno" << endl;
+
+            if (totalAlumnos < MAX_ALUMNOS)
+            {
+                cout << "Nombre del alumno: ";
+                cin.ignore();
+                getline(cin, nombres[totalAlumnos]);
+
+                cout << "Matricula: ";
+                getline(cin, matriculas[totalAlumnos]);
+
+                cout << "Promedio: ";
+                cin >> promedios[totalAlumnos];
+
+                totalAlumnos++;
+
+                cout << endl;
+                cout << "Alumno registrado correctamente." << endl;
+            }
+            else
+            {
+                cout << "Limite de alumnos alcanzado." << endl;
+            }
+
             break;
 
         case 2:
