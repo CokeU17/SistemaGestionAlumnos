@@ -9,4 +9,4 @@ Proyecto hecho y realizado en C++ para la materia de Tópicos Avanzados de Progr
 - Eliminar alumnos
 
 ## Autor
-Ángel Terán
+Ángel Terán (the big boss, yeah)
