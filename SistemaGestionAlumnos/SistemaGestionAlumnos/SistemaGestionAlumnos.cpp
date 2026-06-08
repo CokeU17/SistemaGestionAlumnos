@@ -107,8 +107,45 @@ int main()
         }
 
         case 4:
-            cout << "Opcion seleccionada: Eliminar alumno" << endl;
+        {
+            string matriculaEliminar;
+            bool encontrado = false;
+            int posicionEliminar = -1;
+
+            cout << "Ingresa la matricula del alumno a eliminar: ";
+            cin.ignore();
+            getline(cin, matriculaEliminar);
+
+            for (int i = 0; i < totalAlumnos; i++)
+            {
+                if (matriculas[i] == matriculaEliminar)
+                {
+                    encontrado = true;
+                    posicionEliminar = i;
+                    break;
+                }
+            }
+
+            if (encontrado)
+            {
+                for (int i = posicionEliminar; i < totalAlumnos - 1; i++)
+                {
+                    nombres[i] = nombres[i + 1];
+                    matriculas[i] = matriculas[i + 1];
+                    promedios[i] = promedios[i + 1];
+                }
+
+                totalAlumnos--;
+
+                cout << "Alumno eliminado correctamente." << endl;
+            }
+            else
+            {
+                cout << "No se encontro ningun alumno con esa matricula." << endl;
+            }
+
             break;
+        }
 
         case 5:
             cout << "Saliendo del sistema..." << endl;
