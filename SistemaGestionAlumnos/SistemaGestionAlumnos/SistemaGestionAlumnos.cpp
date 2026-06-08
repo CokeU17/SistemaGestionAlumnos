@@ -1,11 +1,31 @@
 #include <iostream>
 #include <string>
 using namespace std;
-const int MAX_ALUMNOS = 3;
-string nombres[MAX_ALUMNOS];
-string matriculas[MAX_ALUMNOS];
-float promedios[MAX_ALUMNOS];
-int totalAlumnos = 0;
+
+/**
+ * @brief Variables principales utilizadas para el almacenamiento y gestion
+ * de la informacion de los alumnos dentro del sistema.
+ */
+const int MAX_ALUMNOS = 3;      ///< Limite maximo de alumnos.
+string nombres[MAX_ALUMNOS];    ///< Nombres de los alumnos.
+string matriculas[MAX_ALUMNOS]; ///< Matriculas de los alumnos.
+float promedios[MAX_ALUMNOS];   ///< Promedios de los alumnos.
+int totalAlumnos = 0;           ///< Cantidad de alumnos registrados.
+
+/**
+ * @brief Funcion principal del Sistema de Gestion de Alumnos.
+ *
+ * Permite agregar, mostrar, buscar y eliminar alumnos mediante
+ * un menu interactivo en consola.
+ *
+ * Complejidades principales:
+ * - Agregar alumno: O(1)
+ * - Mostrar alumnos: O(n)
+ * - Buscar alumno: O(n)
+ * - Eliminar alumno: O(n)
+ *
+ * @return int Retorna 0 si el programa finaliza correctamente.
+ */
 int main()
 {
     int opcion;
@@ -28,7 +48,12 @@ int main()
         switch (opcion)
         {
         case 1:
-
+            /**
+             * @brief Agrega un alumno al sistema.
+             *
+             * Complejidad temporal: O(1)
+             * Complejidad espacial: O(1)
+             */
             if (totalAlumnos < MAX_ALUMNOS)
             {
                 cout << "Nombre del alumno: ";
@@ -54,7 +79,12 @@ int main()
             break;
 
         case 2:
-
+            /**
+             * @brief Muestra todos los alumnos registrados.
+             *
+             * Complejidad temporal: O(n)
+             * Complejidad espacial: O(1)
+             */
             if (totalAlumnos == 0)
             {
                 cout << "No hay alumnos registrados." << endl;
@@ -77,6 +107,12 @@ int main()
 
         case 3:
         {
+            /**
+             * @brief Busca un alumno por medio de su matricula.
+             *
+             * Complejidad temporal: O(n)
+             * Complejidad espacial: O(1)
+             */
             string matriculaBuscar;
             bool encontrado = false;
 
@@ -108,6 +144,12 @@ int main()
 
         case 4:
         {
+            /**
+             * @brief Elimina un alumno buscando su matricula.
+             *
+             * Complejidad temporal: O(n)
+             * Complejidad espacial: O(1)
+             */
             string matriculaEliminar;
             bool encontrado = false;
             int posicionEliminar = -1;
