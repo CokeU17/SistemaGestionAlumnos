@@ -76,8 +76,35 @@ int main()
             break;
 
         case 3:
-            cout << "Opcion seleccionada: Buscar alumno" << endl;
+        {
+            string matriculaBuscar;
+            bool encontrado = false;
+
+            cout << "Ingresa la matricula del alumno a buscar: ";
+            cin.ignore();
+            getline(cin, matriculaBuscar);
+
+            for (int i = 0; i < totalAlumnos; i++)
+            {
+                if (matriculas[i] == matriculaBuscar)
+                {
+                    cout << "=== ALUMNO ENCONTRADO ===" << endl;
+                    cout << "Nombre: " << nombres[i] << endl;
+                    cout << "Matricula: " << matriculas[i] << endl;
+                    cout << "Promedio: " << promedios[i] << endl;
+
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (!encontrado)
+            {
+                cout << "No se encontro ningun alumno con esa matricula." << endl;
+            }
+
             break;
+        }
 
         case 4:
             cout << "Opcion seleccionada: Eliminar alumno" << endl;
